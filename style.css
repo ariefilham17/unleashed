@@ -1,0 +1,50 @@
+:root {
+  --bg: #eef1f4;
+  --surface: #ffffff;
+  --ink: #14202b;
+  --muted: #4f5d6b;
+  --accent: #1b5e8c;
+  --line: #d3dae1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1820;
+    --surface: #17232e;
+    --ink: #e8eef3;
+    --muted: #9fb0bf;
+    --accent: #6fb3e0;
+    --line: #2a3a48;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 1rem; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Avenir Next", "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.65;
+}
+a { color: var(--accent); }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.25rem; }
+header { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+header .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+.brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.01em; text-decoration: none; color: var(--ink); }
+nav a { margin-left: 1.25rem; text-decoration: none; color: var(--muted); }
+nav a:hover { color: var(--ink); }
+.hero { padding: 4.5rem 0 3rem; }
+.hero h1 { font-size: clamp(2.4rem, 8vw, 4rem); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 1rem; max-width: 14ch; }
+.hero p { font-size: 1.15rem; color: var(--muted); max-width: 34rem; margin: 0; }
+section { padding: 2rem 0; }
+h2 { font-size: 1.4rem; letter-spacing: -0.01em; margin: 0 0 1rem; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 0.4rem; }
+ol.steps { padding-left: 1.25rem; margin: 0; }
+ol.steps li { margin-bottom: 0.9rem; padding-left: 0.25rem; }
+ol.steps strong { display: block; }
+.note { background: var(--surface); border-left: 4px solid var(--accent); padding: 1rem 1.25rem; border-radius: 0 6px 6px 0; }
+.doc { padding: 3rem 0 2rem; }
+.doc h1 { font-size: 2rem; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
+.doc .meta { color: var(--muted); margin: 0 0 2rem; }
+footer { margin-top: 3rem; padding: 1.5rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+footer a { margin-right: 1rem; }
